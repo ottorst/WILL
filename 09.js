@@ -25,6 +25,17 @@ function filtrar(funcion) {
   //   return p.price >= 50;
   // }) => [{price: 100, name:'tv'}]
 
+  function mayorQue(precio) {
+    return precio > 50;
+  }
+
+  Array.prototype.filtrar = function(callback) {
+    const arregloFiltrado = [];
+    for(elemento of this) {
+      if (callback(elemento.price)) { arregloFiltrado.push(elemento); }
+    }
+    return arregloFiltrado;
+  }
 };
 
 // No modifiques nada debajo de esta linea //

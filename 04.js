@@ -13,7 +13,11 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  // Lo convierto Obtengo el entero con ParseInt al convertir el parámetro num
+  // a String (toString), lo convierto a array de caracteres (spilt),
+  // lo invierto (reverse), lo uno en un string (join)
+  var simetrico = parseInt(num.toString().split('').reverse().join(''));
+  return simetrico === num;
 }
 
 // No modifiques nada debajo de esta linea //
